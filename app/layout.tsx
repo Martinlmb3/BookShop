@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "BookShop - Your Personal Digital Library",
   description:
     "Manage your books, track your reading progress, and secure your data. A modern solution for book enthusiasts.",
+  icons: {
+    icon: "/images/BookShop - logo.svg",
+  },
 }
 
 export default function RootLayout({

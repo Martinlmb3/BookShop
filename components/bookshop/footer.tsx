@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { BookOpen } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -8,9 +8,13 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                <BookOpen className="h-4 w-4 text-primary-foreground" />
-              </div>
+              <Image
+                src="/images/BookShop - logo.svg"
+                alt="BookShop Logo"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
               <span className="text-lg font-bold text-foreground">BookShop</span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">

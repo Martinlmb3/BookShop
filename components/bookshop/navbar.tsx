@@ -1,8 +1,9 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { BookOpen, Search, User, LogOut, Bell, PlusCircle } from "lucide-react"
+import { Search, User, LogOut, Bell, PlusCircle } from "lucide-react"
 
 export function Navbar({ variant = "public" }: { variant?: "public" | "auth" }) {
   const pathname = usePathname()
@@ -12,9 +13,13 @@ export function Navbar({ variant = "public" }: { variant?: "public" | "auth" }) 
       <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:px-8">
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-              <BookOpen className="h-4 w-4 text-primary-foreground" />
-            </div>
+            <Image
+              src="/images/BookShop - logo.svg"
+              alt="BookShop Logo"
+              width={32}
+              height={32}
+              className="h-8 w-8"
+            />
             <span className="text-lg font-bold text-foreground">BookShop</span>
           </Link>
           <nav className="hidden items-center gap-8 md:flex">
@@ -67,9 +72,13 @@ export function Navbar({ variant = "public" }: { variant?: "public" | "auth" }) 
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-            <BookOpen className="h-4 w-4 text-primary-foreground" />
-          </div>
+          <Image
+            src="/images/BookShop - logo.svg"
+            alt="BookShop Logo"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+          />
           <span className="text-lg font-bold text-foreground">BookShop</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
