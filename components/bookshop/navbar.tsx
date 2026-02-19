@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Search, User, LogOut, Bell, PlusCircle } from "lucide-react"
+import { Search, LogOut } from "lucide-react"
 
 export function Navbar({ variant = "public" }: { variant?: "public" | "auth" }) {
   const pathname = usePathname()
@@ -49,13 +49,6 @@ export function Navbar({ variant = "public" }: { variant?: "public" | "auth" }) 
             </Link>
           </nav>
           <div className="flex items-center gap-3">
-            <div className="hidden items-center gap-2 md:flex">
-              <span className="text-sm font-medium text-foreground">Admin User</span>
-              <span className="text-xs text-primary">PRO MEMBER</span>
-            </div>
-            <button className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary text-muted-foreground transition-colors hover:text-foreground">
-              <User className="h-4 w-4" />
-            </button>
             <Link
               href="/"
               className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-accent-foreground transition-colors hover:bg-accent/80"

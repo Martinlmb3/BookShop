@@ -4,10 +4,8 @@ import { useState } from "react"
 import Image from "next/image"
 import {
   Search,
-  Heart,
   ChevronLeft,
   ChevronRight,
-  Star,
 } from "lucide-react"
 
 const categories = [
@@ -85,22 +83,6 @@ const books = [
   },
 ]
 
-const ratingOptions = [4, 3]
-
-function StarRating({ count }: { count: number }) {
-  return (
-    <div className="flex items-center gap-0.5">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <Star
-          key={i}
-          className={`h-3.5 w-3.5 ${
-            i < count ? "fill-primary text-primary" : "fill-muted text-muted"
-          }`}
-        />
-      ))}
-    </div>
-  )
-}
 
 export function BrowseContent() {
   const [searchQuery, setSearchQuery] = useState("")
@@ -138,20 +120,6 @@ export function BrowseContent() {
                     className="h-4 w-4 rounded border-border bg-secondary accent-primary"
                   />
                   <span className="text-sm text-muted-foreground">{cat.name}</span>
-                </label>
-              ))}
-            </div>
-          </div>
-
-          <div className="mb-8">
-            <h3 className="mb-4 text-xs font-bold uppercase tracking-wider text-primary">
-              Customer Rating
-            </h3>
-            <div className="flex flex-col gap-3">
-              {ratingOptions.map((r) => (
-                <label key={r} className="flex cursor-pointer items-center gap-2">
-                  <StarRating count={r} />
-                  <span className="text-xs text-muted-foreground">{"& up"}</span>
                 </label>
               ))}
             </div>
@@ -200,11 +168,6 @@ export function BrowseContent() {
                     <span className="absolute left-3 top-3 rounded bg-primary px-2 py-0.5 text-xs font-bold text-primary-foreground">
                       {book.badge}
                     </span>
-                  )}
-                  {book.wishlist && (
-                    <button className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-card/80 text-muted-foreground transition-colors hover:text-primary">
-                      <Heart className="h-4 w-4" />
-                    </button>
                   )}
                 </div>
                 <div className="p-4">

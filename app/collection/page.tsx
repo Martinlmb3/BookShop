@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/bookshop/navbar"
 import { CollectionDashboard } from "@/components/bookshop/collection-dashboard"
-import { CollectionFooter } from "@/components/bookshop/collection-footer"
+import { Footer } from "@/components/bookshop/footer"
 
 export const metadata = {
   title: "My Collection - BookShop",
@@ -14,7 +14,7 @@ export default function CollectionPage() {
       <main>
         <CollectionDashboard />
       </main>
-      <CollectionFooter />
+      <Footer />
     </div>
   )
 }

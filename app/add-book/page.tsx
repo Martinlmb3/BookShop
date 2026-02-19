@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/bookshop/navbar"
 import { AddBookForm } from "@/components/bookshop/add-book-form"
-import { AddBookFooter } from "@/components/bookshop/add-book-footer"
+import { Footer } from "@/components/bookshop/footer"
 
 export const metadata = {
   title: "Add New Book - BookShop",
@@ -14,7 +14,7 @@ export default function AddBookPage() {
       <main className="flex-1">
         <AddBookForm />
       </main>
-      <AddBookFooter />
+      <Footer />
     </div>
   )
 }
